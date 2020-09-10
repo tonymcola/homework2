@@ -1,0 +1,23 @@
+import java.util.Scanner; 
+public class Main 
+{ 
+  public static void main(String[] args) 
+  { 
+    int count = 0; 
+    Scanner getString = new Scanner(System.in);
+    System.out.println( "Enter a book from the New Testament!");
+    
+    String strBible = getString.nextLine(); 
+    strBible = strBible.toLowerCase();
+
+    for (int i = 0; i < strBible.length(); i++) 
+    {
+      if (strBible.charAt(i) == 'a' || strBible.charAt(i) == 'e' || strBible.charAt(i) == 'i'
+      || strBible.charAt(i) == 'o' || strBible.charAt(i) == 'u') 
+      {
+        count++;
+      }
+    }
+    System.out.println("There are " + count + " vowels in your New Testament chapter title.");
+  }
+}
